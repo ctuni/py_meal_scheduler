@@ -34,9 +34,9 @@ Once this is done, the script will be ready to run manually, but to run it autom
 
 ## Add script to crontab
 *For Linux and macOS users*
-Run `crontab -e` and add the following line to the bottom of the file:
+Run `crontab -e` and add the following line to the bottom of the file, which will send a daily email at 22h from Monday to Friday (you're free of your scheduler's rules on the weekends!)
 ```
-5 0 * * * /path/to/menu_gen.py
+0 22 * * 1-5 /path/to/your/bin/python /path/to/menu_gen.py
 ```
 
 *For Windows users*
